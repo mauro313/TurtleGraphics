@@ -4,10 +4,11 @@
  */
 package turtlegraphics;
 
+import java.io.PrintStream;
 import java.util.HashMap;
 import java.util.Scanner;
-import java.lang.reflect.*;
         
+
 public class TurtleGraphics {
     static int [][] board = new int [20][20];
     static int positionx = 0;
@@ -20,20 +21,20 @@ public class TurtleGraphics {
       Scanner entry = new Scanner(System.in);
       String command = null;
       System.out.printf("Introduce a command(1-7):\n"
-                + "1-PenDown\n"
-                + "2-PenUp\n"
-                + "3-turnLeft\n"
-                + "4-turnRight\n"
-                + "5-moveAlong\n"
-                + "6-print\n"
-                + "7-dataEnd\n");
+              + "1-PenDown\n"
+              + "2-PenUp\n"
+              + "3-turnLeft\n"
+              + "4-turnRight\n"
+              + "5-moveAlong\n"
+              + "6-print\n"
+              + "7-dataEnd\n");
       
       do{
           System.out.printf("Your command: ");
           int number = entry.nextInt();
           if(number>=1 && number<=7){
             if(number == 5){
-              System.out.printf("\nIntroduce the size of step(0-20):");  
+              System.out.printf("\nIntroduce the size of step(0-19):");  
               int size = entry.nextInt();
                 sizeOfStep = size;
                 System.out.println();
@@ -52,7 +53,7 @@ public class TurtleGraphics {
     }
     
     /**
-     * static method to select a command based in a index.
+     * static method to select a command based in an index.
      * @param number
      * @return
      * @throws Exception 
