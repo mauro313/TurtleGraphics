@@ -86,7 +86,7 @@ public class TurtleGraphics {
      */
     public static String turnRight(){
       String returned = null;
-      if((positiony==0 && direction==3) || (positionx==0 && direction == 1) || 
+      if((positiony==0 && direction==1) || (positionx==0 && direction == 2) || 
       (positionx==19 && direction== 0) || (positiony== 19 && direction== 3) ){
         returned = "Failure";
       }  
@@ -109,7 +109,7 @@ public class TurtleGraphics {
      */
     public static String turnLeft(){
       String returned = null;
-      if((positionx==0 && direction==2) || (positiony==0 && direction == 0) || 
+      if((positionx==0 && direction==0) || (positiony==0 && direction == 3) || 
       (positionx==19 && direction== 2) || (positiony== 19 && direction== 1) ){
         returned = "Failure";
       }  
